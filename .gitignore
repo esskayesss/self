@@ -1,2 +1,5 @@
+*.fig
 node_modules
+
 bin
+*.out
