@@ -3,6 +3,7 @@
 
 #define IN 0
 #define OUT 1
+#define newline_char 1
 
 main(){
     long nc, nl, nw;
@@ -11,6 +12,9 @@ main(){
     short state = OUT;
 
     for(nc = 0, nl = 0, nw = 0; (ch = getchar()) != EOF; nc++){
+        
+        if(ch == '\n' && newline_char) nc--;
+        
         if(isspace(ch)){
             if(ch == '\n') nl++;
             
