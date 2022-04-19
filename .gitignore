@@ -1,3 +1,5 @@
+test.*
+
 *.fig
 node_modules
 
