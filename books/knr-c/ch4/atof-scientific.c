@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
-double atof(char* str){
+double atof_s(char* str){
     double val = 0;
     int sign = 1;
     char* cursor = str;
@@ -37,6 +38,8 @@ double atof(char* str){
 }
 
 int main(){
-    char* number = "-1.23468734394343e5";
-    printf("%lf\n", atof(number));
+    size_t size = 10;
+    char* number = (char*)malloc(size*sizeof(char));
+    getline(&number, &size, stdin);
+    printf("%lf\n", atof_s(number));
 }
